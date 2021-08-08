@@ -8,7 +8,6 @@ import shortid from 'shortid';
 class App extends Component {
   state = {
     contacts: [],
-    // name: '',
   };
 
   formSubmitHandler = ({ name, number }) => {
@@ -52,7 +51,10 @@ class App extends Component {
         <h1>Phonebook</h1>
         <Form onSubmit={this.formSubmitHandler} />
         <h2>Contacts</h2>
-        <Contacts contacts={this.contacts} contactDelete={this.contactDelete} />
+        <Contacts
+          contacts={this.state.contacts}
+          contactDelete={this.contactDelete}
+        />
       </Container>
     );
   }

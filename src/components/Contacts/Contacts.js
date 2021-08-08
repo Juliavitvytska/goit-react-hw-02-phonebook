@@ -31,7 +31,7 @@ class Contacts extends Component {
             <ContactList
               contact={contact}
               key={contact.id}
-              onContactDelete={this.props.onContactDelete}
+              contactDelete={this.props.contactDelete}
             />
           ))}
         </ul>
